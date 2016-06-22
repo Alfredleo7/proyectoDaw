@@ -1,0 +1,40 @@
+.container{
+	max-width: 90%;
+}
+
+img{
+    width: 100%
+}
+
+
+header{
+    padding: 8px;
+    border-radius: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2f71aa), color-stop(9, white));
+}
+
+.carrusel{
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.titulo{
+    font-size: 180%;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+.subtitulo{
+    font-size: 130%;
+    font-family: 'Lora', serif;
+}
+
+section{
+    max-width: 65%;
+    padding: 10px;
+    margin: 10px auto 15px auto;
+}
+
+.txt-carrusel{
+    font-size: 200%;
+}
