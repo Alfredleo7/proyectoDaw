@@ -15,7 +15,7 @@ header{
 
 .carrusel{
     border-radius: 10px;
-    padding: 15px;
+    padding: 5%;
 }
 
 .titulo{
@@ -30,11 +30,18 @@ header{
 }
 
 section{
-    max-width: 65%;
     padding: 10px;
     margin: 10px auto 15px auto;
 }
 
 .txt-carrusel{
     font-size: 200%;
+}
+
+.boton{
+    text-align: center;
+}
+
+.campo{
+    font-weight: bold;
 }
