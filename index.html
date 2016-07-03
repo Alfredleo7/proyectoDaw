@@ -11,29 +11,33 @@
 <body>
 	<div class="container">
 		<header>
-            <div class="row">
-                <div class="div-logo col-md-2">
-                    <img class="logo img-thumbnail" src="imagenes/logo.jpg">
+        <nav class="navbar navbar-fixed-top">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Salud Primero</a>
                 </div>
-                <div class="col-md-4 panel-titulo">
-                    <p class="titulo">Centro Médico<br>Salud Primero</p>
-                    <p class="subtitulo">"Porque su salud nos importa"</p>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Contraseña">
+                    </div>
+                    <a href="centrosMedicos.html" class="btn btn-default" role="button">Iniciar Sesión</a>
+                  </form>
                 </div>
-                <div class="col-md-6">
-                    <form class="form-inline">
-                      <div class="form-group">
-                        <label class="sr-only" for="usuario">Usuario</label>
-                        <input type="text" class="form-control" id="usuario" placeholder="Usuario">
-                      </div>
-                      <div class="form-group">
-                        <label class="sr-only" for="exampleInputPassword3">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                      </div>
-                      <button type="button" class="btn btn-primary" onclick="location.href='centrosMedicos.html'">Ingresar</button>
-                    </form>
-                </div>
-            </div>
-        </header>
+              </div>
+        </nav>
+    </header>
         <section class="carrusel">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
