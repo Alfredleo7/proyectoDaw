@@ -3,6 +3,7 @@
 <head>
 	<title>Salud Primero</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="stylesheets/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -10,23 +11,23 @@
 </head>
 <body>
 	<div class="container">
+       
 		<header>
             <div class="row">
-                <div class="col-md-2">
+                <div class="div-logo col-md-2">
                     <img class="logo img-thumbnail" src="imagenes/logo.jpg">
                 </div>
-                <div class="col-md-4 panel-titulo">
+                <div class="col-md-5 div-titulo">
                     <p class="titulo">Centro Médico<br>Salud Primero</p>
                     <p class="subtitulo">"Porque su salud nos importa"</p>
                 </div>
-                <div class="usuario col-md-6">
-                    <h4 class="bienvenida col-md-5">Bienvenido, <spam id="paciente_Nombre">Juan Perez</spam></h4>
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="foto-perfil" src="imagenes/perfil.jpg">
+                <div class="col-md-5 div-boton">
+                    <div class="btn-group boton-usuario">
+                      <button type="button" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="texto-boton-bienvenido">Bienvenido, <span id="nombre-usuario">Juan Perez </span></span><span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Perfil </a></li>
+                        <li><a href="#">Perfil</a></li>
                         <li><a href="#">Mis Exámenes</a></li>
                         <li><a href="#">Centros Médicos</a></li>
                         <li role="separator" class="divider"></li>
@@ -36,7 +37,7 @@
                 </div>
             </div>
         </header>
-        <nav>
+        <nav class="menu_principal">
             <ul class="nav nav-pills nav-justified">
                 <li role="presentation"><a href="#">Perfil</a></li>
                 <li role="presentation"><a href="#">Mis Exámenes</a></li>
@@ -104,7 +105,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Galería</button>
 
                             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                                <div class="modal-dialog modal-lg">
+                                <div class="carrusel_galeria modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                           <!-- Indicators -->

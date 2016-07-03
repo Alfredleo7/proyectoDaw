@@ -2,20 +2,18 @@
 	max-width: 90%;
 }
 
+.logo{
+    width: 155px;
+}
+
+
 img{
     width: 100%
 }
 
-
 header{
-    padding: 8px;
-    border-radius: 10px;
+    padding: 2%;
     background: -webkit-gradient(linear, left top, left bottom, from(#2f71aa), color-stop(9, white));
-}
-
-.carrusel{
-    border-radius: 10px;
-    padding: 5%;
 }
 
 .titulo{
@@ -29,8 +27,10 @@ header{
     font-family: 'Lora', serif;
 }
 
+
+
 section{
-    padding: 10px;
+    padding: 1%;
     margin: 10px auto 15px auto;
 }
 
@@ -42,6 +42,60 @@ section{
     text-align: center;
 }
 
+.carrusel{
+    padding: 5%;
+}
+
 .campo{
     font-weight: bold;
+}
+
+.boton_usuario{
+    float: right;
+}
+
+
+
+@media only screen and (max-width: 991px){
+    .div-logo{
+        display: none;
+    }
+    .container{
+	   max-width: 100%;
+    }
+    .menu_principal{
+        display: none;
+    }
+    .titulo{
+        font-size: 1.3em;
+        float: left;
+        padding-right: 5%;
+    }
+    
+    .subtitulo{
+        display: none;
+    }
+    
+    header{
+        position: fixed;
+        z-index: 99;
+        width: 90%;
+    }
+    
+    .texto-boton-bienvenido{
+        display: none;
+    }
+    
+    .boton-usuario{
+        padding-left: 10%;
+    }
+    section{
+        padding-top: 20%;
+    }
+    .usuario{
+        display: none;
+    }
+    .carrusel{
+        padding-top: 215px;
+    }
 }
