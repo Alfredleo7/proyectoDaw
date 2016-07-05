@@ -1,11 +1,11 @@
-$(document).ready(init());
+
 
 function init(){
 	$(".centrosMedicos").hide();
 	$(".misExamenes").hide();
-	$("#misDatos").on("click", mostrarMisDatos);
-	$("#misExamenes").on("click", mostrarMisExamenes);
-	$("#centrosMedicos").on("click", mostrarCentrosMedicos);
+	$("#misDatos").on("click", mostrarPanelMisDatos);
+	$("#misExamenes").on("click", mostrarPanelMisExamenes);
+	$("#centrosMedicos").on("click", mostrarPanelCentrosMedicos);
 
 	var urlPaciente="json/paciente.json";
 	$.getJSON(urlPaciente,function(respuesta){
@@ -19,22 +19,65 @@ function init(){
 			$(".foto-perfil").attr("src", paciente.fotoPerfil)
 		});
 	});
+
+	var urlCentrosMedicos = "json/centrosMedicos.json";
+	$.getJSON(urlCentrosMedicos,function(respuesta){
+		respuesta.forEach(function(centroMedico){
+			var elemento = $("<button>", {
+				html: centroMedico.nombre,
+				"class": "btn btn-default btn-lg btn-block btn-centroMedico",
+				"id": centroMedico.nombre
+			});
+			elemento.on("click", mostrarDetallesCentroMedico);
+			if(centroMedico.ubicacion == "Guayaquil"){
+				$(".panel_guayaquil").append(elemento);
+			}
+			if(centroMedico.ubicacion == "Quito"){
+				$(".panel_quito").append(elemento);
+			}
+			if(centroMedico.ubicacion == "Cuenca"){
+				$(".panel_cuenca").append(elemento);
+			}
+		});
+	});
 }
 
-function mostrarMisDatos(){
+function mostrarPanelMisDatos(){
 	$(".datos").show();
 	$(".misExamenes").hide();
 	$(".centrosMedicos").hide();
 }
 
-function mostrarMisExamenes(){
+function mostrarPanelMisExamenes(){
 	$(".datos").hide();
 	$(".misExamenes").show();
 	$(".centrosMedicos").hide();
 }
 
-function mostrarCentrosMedicos(){
+function mostrarPanelCentrosMedicos(){
 	$(".datos").hide();
 	$(".misExamenes").hide();
 	$(".centrosMedicos").show();
 }
+
+function mostrarDetallesCentroMedico(){
+	var nombre = $(this).attr("id");
+	var urlCentrosMedicos = "json/centrosMedicos.json";
+	$.getJSON(urlCentrosMedicos,function(respuesta){
+		respuesta.forEach(function(centroMedico){
+			if(nombre == centroMedico.nombre){
+				$("#centro_Nombre").empty();
+				$("#direccion").empty();
+				$("#descripcion").empty();
+				$("#horarios").empty();
+
+				$("#centro_Nombre").append(centroMedico.nombre);
+				$("#direccion").append(centroMedico.direccion);
+				$("#descripcion").append(centroMedico.descripcion);
+				$("#horarios").append(centroMedico.horarios);
+			}
+		});
+	});
+}
+
+$(document).ready(init());
