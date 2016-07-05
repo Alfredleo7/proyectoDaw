@@ -15,11 +15,7 @@ body{
     font-size: 200%;
 }
 
-.boton{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
+
 
 .carrusel{
     padding: 5%;
@@ -37,7 +33,13 @@ img{
     float: right;
 } 
 
-
+button
+{color: aliceblue;
+border-color: #23537d;
+position: absolute;
+top: 80px; 
+left: 80px;
+}
 .navbar{
     background-color: #3174ae;
 }
