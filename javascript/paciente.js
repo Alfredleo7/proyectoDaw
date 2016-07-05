@@ -40,6 +40,21 @@ function init(){
 			}
 		});
 	});
+
+	var urlExamenes = "json/examenes.json";
+	var n=1;
+	$.getJSON(urlExamenes,function(respuesta){
+		respuesta.forEach(function(examen){
+			var elemento = $("<tr>");
+			elemento.append("<td>" + n + "</td>");
+			elemento.append("<td>" + examen.fecha + "</td>");
+			elemento.append("<td>" + examen.tipoExamen + "</td>");
+			elemento.append("<td>" + examen.estado + "</td>");
+			elemento.append("<td>" + examen.link + "</td>");
+			$(".tabla-examenes").append(elemento);
+			n=n+1;
+		});
+	});
 }
 
 function mostrarPanelMisDatos(){
